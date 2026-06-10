@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-montserrat), "Helvetica Neue", Verdana, sans-serif;
+
+  /* FlashBoard identity */
+  --color-ink: #0f0f1a;
+  --color-surface: #12121e;
+  --color-card: #1a1a2e;
+  --color-line: #2a2a40;
+  --color-fg: #e8e8f0;
+  --color-fg-soft: #8888a0;
+  --color-fg-muted: #555570;
+
+  --color-accent: #c8f135;
+  --color-brand: #6c63ff;
+  --color-brand-soft: #8b84ff;
+  --color-brand-deep: #4a43c4;
+
+  /* feature header bars */
+  --color-bar-1: #6c63ff;
+  --color-bar-2: #5a8dff;
+  --color-bar-3: #21c7d6;
+  --color-bar-4: #45d9b8;
+
+  --color-green: #10b981;
+  --color-yellow: #f59e0b;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+}
+
+/* ---- Hamburger: 3 lines -> X ---- */
+.menu-line {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+[data-open="true"] .menu-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+[data-open="true"] .menu-line:nth-child(2) {
+  opacity: 0;
+}
+[data-open="true"] .menu-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---- Live demo loop (CSS only) ---- */
+@keyframes progress-a {
+  0%, 8% { width: 34%; }
+  38%, 55% { width: 61%; }
+  82%, 100% { width: 89%; }
+}
+@keyframes progress-b {
+  0%, 15% { width: 12%; }
+  48%, 62% { width: 45%; }
+  90%, 100% { width: 72%; }
+}
+@keyframes progress-c {
+  0%, 5% { width: 58%; }
+  30%, 50% { width: 76%; }
+  75%, 100% { width: 100%; }
+}
+@keyframes card-refresh {
+  0%, 4% { box-shadow: 0 0 0 0 rgba(200, 241, 53, 0); }
+  8% { box-shadow: 0 0 0 2px rgba(200, 241, 53, 0.55); }
+  18%, 100% { box-shadow: 0 0 0 0 rgba(200, 241, 53, 0); }
+}
+@keyframes live-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+}
+
+.anim-progress-a { animation: progress-a 9s ease-in-out infinite; }
+.anim-progress-b { animation: progress-b 9s ease-in-out infinite; }
+.anim-progress-c { animation: progress-c 9s ease-in-out infinite; }
+.anim-card-refresh { animation: card-refresh 9s ease-in-out infinite; }
+.anim-card-refresh-2 { animation: card-refresh 9s ease-in-out 3s infinite; }
+.anim-card-refresh-3 { animation: card-refresh 9s ease-in-out 6s infinite; }
+.anim-live-dot { animation: live-dot 1.6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-progress-a, .anim-progress-b, .anim-progress-c,
+  .anim-card-refresh, .anim-card-refresh-2, .anim-card-refresh-3,
+  .anim-live-dot {
+    animation: none;
+  }
+}
