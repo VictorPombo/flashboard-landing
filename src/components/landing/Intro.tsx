@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { APP_URL } from "@/lib/constants";
 
 export function Intro() {
   return (
@@ -22,7 +23,7 @@ export function Intro() {
             time e indicadores de progresso em um único painel que se atualiza
             sozinho, em menos de um segundo.{" "}
             <Link
-              href="/signup"
+              href={`${APP_URL}/signup`}
               className="font-semibold text-brand-soft underline underline-offset-4 transition-colors duration-200 hover:text-fg"
             >
               Crie sua conta ainda hoje
@@ -34,7 +35,7 @@ export function Intro() {
           O plano grátis inclui até 5 usuários e 50 tarefas ativas. Recursos
           adicionais estão disponíveis nos planos pagos.
         </p>
-        <Button href="/signup" size="lg" className="mt-8">
+        <Button href={`${APP_URL}/signup`} size="lg" className="mt-8">
           Comece grátis
         </Button>
       </Container>

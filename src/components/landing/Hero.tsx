@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { TvPanelMock } from "./TvPanelMock";
+import { APP_URL } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -20,7 +21,7 @@ export function Hero() {
               na parede do escritório — sem planilha, sem reunião de status,
               sem F5.
             </p>
-            <Button href="/signup" size="lg" className="mt-8">
+            <Button href={`${APP_URL}/signup`} size="lg" className="mt-8">
               Comece grátis
             </Button>
             <p className="mt-4 text-xs text-fg-muted">

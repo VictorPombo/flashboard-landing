@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { TvPanelMock } from "./TvPanelMock";
+import { APP_URL } from "@/lib/constants";
 
 // Seção de fechamento. Hoje mostra a demo ao vivo; quando houver métrica
 // real de clientes, troque o <h2> pelo número (mantendo o restante).
@@ -21,7 +22,7 @@ export function LiveDemoCta() {
           <TvPanelMock />
         </div>
 
-        <Button href="/signup" size="lg" className="mt-12">
+        <Button href={`${APP_URL}/signup`} size="lg" className="mt-12">
           Explore o FlashBoard
         </Button>
       </Container>

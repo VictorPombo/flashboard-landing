@@ -1,4 +1,5 @@
 import { Logo } from "./Logo";
+import { APP_URL } from "@/lib/constants";
 
 const COLUMNS = [
   {
@@ -7,7 +8,7 @@ const COLUMNS = [
       { label: "Recursos", href: "#recursos" },
       { label: "Painel de TV", href: "#demo" },
       { label: "Integrações", href: "#integracoes" },
-      { label: "Plano grátis", href: "/signup" },
+      { label: "Plano grátis", href: `${APP_URL}/signup` },
     ],
   },
   {
@@ -22,8 +23,8 @@ const COLUMNS = [
     title: "Empresa",
     links: [
       { label: "Sobre o FlashBoard", href: "#produto" },
-      { label: "Privacidade", href: "/privacidade" },
-      { label: "Termos de uso", href: "/termos" },
+      { label: "Privacidade", href: "#" },
+      { label: "Termos de uso", href: "#" },
     ],
   },
 ];

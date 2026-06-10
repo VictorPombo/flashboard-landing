@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "FlashBoard — Painel de tarefas em tempo real na TV do time",
   description:
     "Gestão de tarefas com painel de TV ao vivo: kanban, metas e progresso do time atualizando em menos de 1 segundo, sem F5. Comece grátis com até 5 usuários.",
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     title: "FlashBoard — Suas tarefas, ao vivo na TV do time",
     description:

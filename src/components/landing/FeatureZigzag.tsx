@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { FeatureArt, type ArtVariant } from "./FeatureArt";
+import { APP_URL } from "@/lib/constants";
 
 type Feature = {
   title: string;
@@ -103,7 +104,7 @@ export function FeatureZigzag() {
                   >
                     Saiba mais
                   </a>
-                  {feature.withCta && <Button href="/signup">Comece grátis</Button>}
+                  {feature.withCta && <Button href={`${APP_URL}/signup`}>Comece grátis</Button>}
                 </div>
               </div>
             </div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "./Logo";
+import { APP_URL } from "@/lib/constants";
 
 const NAV_ITEMS = [
   { label: "Produto", href: "#produto" },
@@ -36,12 +37,12 @@ export function Header() {
 
         <div className="hidden items-center gap-6 lg:flex">
           <a
-            href="/login"
+            href={`${APP_URL}/login`}
             className="text-sm font-semibold text-fg-soft transition-colors duration-200 hover:text-fg"
           >
             Entrar
           </a>
-          <Button href="/signup">Comece grátis</Button>
+          <Button href={`${APP_URL}/signup`}>Comece grátis</Button>
         </div>
 
         <button
@@ -74,13 +75,13 @@ export function Header() {
             </a>
           ))}
           <a
-            href="/login"
+            href={`${APP_URL}/login`}
             className="rounded-lg px-3 py-3 text-base font-semibold text-fg-soft hover:bg-card hover:text-fg"
           >
             Entrar
           </a>
           <div className="mt-3 px-3">
-            <Button href="/signup" className="w-full text-center">
+            <Button href={`${APP_URL}/signup`} className="w-full text-center">
               Comece grátis
             </Button>
           </div>
